@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 30); /* Dark background */
+    color: rgb(230, 230, 230); /* Light text color */
+    animation: fadeIn 2s ease-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: rgb(40, 40, 40); /* Dark gray navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    animation: slideIn 1s ease-out;
+}
+
+.logo {
+    color: rgb(0, 160, 255); /* Neon blue */
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(0, 160, 255), 0 0 20px rgb(0, 160, 255);
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgb(0, 160, 255), 0 0 20px rgb(0, 160, 255), 0 0 30px rgb(0, 160, 255);
+    }
+    50% {
+        text-shadow: 0 0 20px rgb(255, 140, 0), 0 0 30px rgb(255, 140, 0), 0 0 40px rgb(255, 140, 0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(100, 100, 255); /* Neon blue */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.menu a:hover {
+    color: rgb(255, 140, 0); /* Neon orange */
+    text-shadow: 0 0 10px rgb(255, 140, 0), 0 0 20px rgb(255, 140, 0);
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(0, 160, 255); /* Neon blue */
+    text-shadow: 0 0 10px rgb(0, 160, 255), 0 0 20px rgb(0, 160, 255);
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.bio {
+    color: rgb(200, 200, 200); /* Soft light gray */
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 600px;
+}
+
+.bio p {
+    margin-bottom: 10px;
+}
+
+.photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(0, 160, 255);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: rgb(40, 40, 40); /* Dark gray footer */
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(119, 119, 119);
+    animation: fadeIn 2s ease-out;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Neon Effect Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

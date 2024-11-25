@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #000000, #0010a0, #850000);
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #0a0a0a;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(90deg, #990000, #0000ff);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease, background-position 0.5s ease;
+            background-size: 200% 200%;
+            background-position: left center;
+        }
+        .header:hover {
+            transform: translateY(-10px);
+            background-position: right center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .form-section, .info-section {
+            flex: 1;
+            margin: 10px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            background-color: #000000;
+            color: #ffffff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        input:hover, textarea:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.7);
+        }
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            background: linear-gradient(90deg, #850000, #0000ff);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #0000ff, #850000);
+            transform: scale(1.1);
+        }
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .info-section img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 100%;
+            margin-bottom: 15px;
+            border: 3px solid #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-section img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8);
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+          <h1 class="logo">MY TRAVEL BLOG</h1>
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="container">
+        <div class="header">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="contact-content">
+            <!-- Form Section -->
+            <div class="form-section">
+                <form action="submit_contact.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <img src="images/4.jpeg" alt="Profile Picture">
+                <div class="contact-info">
+                    <p><strong>Name: Ultaza Syah</strong></p>
+                    <p><strong>Email: ultazanagan111@gmail.com</strong></p>
+                    <p><strong>Phone: +62 822 1146 4363</strong></p>
+                    <p><strong>Address: Nagan Raya, Aceh, Indonesia</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="stories.html">Stories</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</body>
+</html>
